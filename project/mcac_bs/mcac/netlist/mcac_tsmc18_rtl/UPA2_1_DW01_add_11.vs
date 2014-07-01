@@ -1,0 +1,156 @@
+
+module UPA2_1_DW01_add_11 ( A, B, CI, SUM, CO );
+  input [15:0] A;
+  input [15:0] B;
+  output [15:0] SUM;
+  input CI;
+  output CO;
+  wire   n1, n2, n4, n5, n6, n7, n8, n10, n11, n12, n14, n19, n20, n22, n24,
+         n25, n26, n27, n28, n29, n30, n31, n32, n33, n34, n35, n36, n37, n38,
+         n39, n40, n41, n43, n45, n46, n47, n48, n49, n51, n53, n54, n55, n56,
+         n57, n59, n61, n62, n63, n64, n65, n67, n69, n70, n71, n72, n73, n74,
+         n75, n76, n78, SUM_1_, SUM_2_, SUM_3_, SUM_4_, SUM_5_, SUM_6_, SUM_7_,
+         SUM_8_, SUM_9_, SUM_10_, SUM_11_, SUM_12_, SUM_13_, SUM_14_, n162,
+         B_0_, B_1_, B_2_, B_3_, B_4_, B_5_, B_6_, B_7_, B_8_, B_9_, B_10_,
+         B_11_, A_0_, A_1_, A_2_, A_3_, A_4_, A_5_, A_6_, A_7_, A_8_, A_9_,
+         A_10_, A_11_, A_12_, A_13_, A_14_, A_15_, n146, SUM_15_, SUM_0_, n149,
+         n150, n151, n152, n153, n154, n155, n156, n157, n158, n159, n160,
+         n161;
+  assign SUM[1] = SUM_1_;
+  assign SUM[2] = SUM_2_;
+  assign SUM[3] = SUM_3_;
+  assign SUM[4] = SUM_4_;
+  assign SUM[5] = SUM_5_;
+  assign SUM[6] = SUM_6_;
+  assign SUM[7] = SUM_7_;
+  assign SUM[8] = SUM_8_;
+  assign SUM[9] = SUM_9_;
+  assign SUM[10] = SUM_10_;
+  assign SUM[11] = SUM_11_;
+  assign SUM[12] = SUM_12_;
+  assign SUM[13] = SUM_13_;
+  assign SUM[14] = SUM_14_;
+  assign B_0_ = B[0];
+  assign B_1_ = B[1];
+  assign B_2_ = B[2];
+  assign B_3_ = B[3];
+  assign B_4_ = B[4];
+  assign B_5_ = B[5];
+  assign B_6_ = B[6];
+  assign B_7_ = B[7];
+  assign B_8_ = B[8];
+  assign B_9_ = B[9];
+  assign B_10_ = B[10];
+  assign B_11_ = B[11];
+  assign A_0_ = A[0];
+  assign A_1_ = A[1];
+  assign A_2_ = A[2];
+  assign A_3_ = A[3];
+  assign A_4_ = A[4];
+  assign A_5_ = A[5];
+  assign A_6_ = A[6];
+  assign A_7_ = A[7];
+  assign A_8_ = A[8];
+  assign A_9_ = A[9];
+  assign A_10_ = A[10];
+  assign A_11_ = A[11];
+  assign A_12_ = A[12];
+  assign A_13_ = A[13];
+  assign A_14_ = A[14];
+  assign A_15_ = A[15];
+  assign SUM[15] = SUM_15_;
+  assign SUM[0] = SUM_0_;
+
+  NOR2X4 U28 ( .A(n161), .B(A_12_), .Y(n32) );
+  OAI21X4 U38 ( .A0(n41), .A1(n39), .B0(n40), .Y(n38) );
+  NAND2X1 U114 ( .A(n161), .B(A_13_), .Y(n29) );
+  BUFX20 U115 ( .A(B_11_), .Y(n161) );
+  NAND2X2 U116 ( .A(B_10_), .B(A_10_), .Y(n40) );
+  NOR2X2 U117 ( .A(B_10_), .B(A_10_), .Y(n39) );
+  OAI2BB1X1 U118 ( .A0N(n38), .A1N(n146), .B0(n36), .Y(n34) );
+  INVX1 U119 ( .A(n35), .Y(n146) );
+  NAND2BX1 U120 ( .AN(n32), .B(n33), .Y(n5) );
+  NAND2BXL U121 ( .AN(n28), .B(n29), .Y(n4) );
+  NOR2BX1 U122 ( .AN(n26), .B(n25), .Y(n149) );
+  NOR2BX1 U123 ( .AN(n76), .B(n75), .Y(n150) );
+  OAI21X2 U124 ( .A0(n55), .A1(n57), .B0(n56), .Y(n54) );
+  NOR2BX1 U125 ( .AN(n72), .B(n71), .Y(n151) );
+  XNOR2X1 U126 ( .A(n10), .B(n54), .Y(SUM_7_) );
+  NOR2BX1 U127 ( .AN(n64), .B(n63), .Y(n153) );
+  NOR2BXL U128 ( .AN(n48), .B(n47), .Y(n152) );
+  XNOR2XL U129 ( .A(n8), .B(n46), .Y(SUM_9_) );
+  OAI21X1 U130 ( .A0(n73), .A1(n71), .B0(n72), .Y(n70) );
+  INVX1 U131 ( .A(n74), .Y(n73) );
+  NAND2BX1 U132 ( .AN(n55), .B(n56), .Y(n11) );
+  NAND2BXL U133 ( .AN(n35), .B(n36), .Y(n6) );
+  NAND2BX1 U134 ( .AN(n39), .B(n40), .Y(n7) );
+  XOR2X2 U135 ( .A(n1), .B(n4), .Y(SUM_13_) );
+  AOI21X2 U136 ( .A0(n157), .A1(n54), .B0(n51), .Y(n49) );
+  NOR2X1 U137 ( .A(B_1_), .B(A_1_), .Y(n75) );
+  NOR2X1 U138 ( .A(B_8_), .B(A_8_), .Y(n47) );
+  NAND2X1 U139 ( .A(B_9_), .B(A_9_), .Y(n45) );
+  XNOR2X2 U140 ( .A(n34), .B(n5), .Y(SUM_12_) );
+  NAND2X1 U141 ( .A(B_0_), .B(A_0_), .Y(n78) );
+  AOI21X1 U142 ( .A0(n159), .A1(n70), .B0(n67), .Y(n65) );
+  NAND2X1 U143 ( .A(B_5_), .B(A_5_), .Y(n61) );
+  NAND2XL U144 ( .A(B_4_), .B(A_4_), .Y(n64) );
+  OAI21XL U145 ( .A0(n63), .A1(n65), .B0(n64), .Y(n62) );
+  OAI21X2 U146 ( .A0(n32), .A1(n36), .B0(n33), .Y(n31) );
+  NOR2X1 U147 ( .A(B_2_), .B(A_2_), .Y(n71) );
+  NOR2X1 U148 ( .A(B_6_), .B(A_6_), .Y(n55) );
+  NAND2X1 U149 ( .A(B_7_), .B(A_7_), .Y(n53) );
+  NAND2X1 U150 ( .A(n161), .B(A_12_), .Y(n33) );
+  OAI21XL U151 ( .A0(n75), .A1(n78), .B0(n76), .Y(n74) );
+  NAND2X1 U152 ( .A(B_6_), .B(A_6_), .Y(n56) );
+  AOI21X1 U153 ( .A0(n158), .A1(n62), .B0(n59), .Y(n57) );
+  INVX1 U154 ( .A(n38), .Y(n37) );
+  XNOR2X2 U155 ( .A(n20), .B(n2), .Y(n162) );
+  NAND2X1 U156 ( .A(n154), .B(n19), .Y(n2) );
+  NOR2X1 U157 ( .A(n161), .B(A_13_), .Y(n28) );
+  NOR2X1 U158 ( .A(n161), .B(A_14_), .Y(n25) );
+  BUFX8 U159 ( .A(n162), .Y(SUM_15_) );
+  OAI21X1 U160 ( .A0(n25), .A1(n29), .B0(n26), .Y(n24) );
+  OAI21X2 U161 ( .A0(n1), .A1(n155), .B0(n22), .Y(n20) );
+  NOR2X1 U162 ( .A(B_4_), .B(A_4_), .Y(n63) );
+  AOI21X2 U163 ( .A0(n30), .A1(n38), .B0(n31), .Y(n1) );
+  OAI21X2 U164 ( .A0(n49), .A1(n47), .B0(n48), .Y(n46) );
+  NAND2XL U165 ( .A(n157), .B(n53), .Y(n10) );
+  XOR2XL U166 ( .A(n11), .B(n57), .Y(SUM_6_) );
+  AND2X1 U167 ( .A(n160), .B(n78), .Y(SUM_0_) );
+  XOR2X2 U168 ( .A(n27), .B(n149), .Y(SUM_14_) );
+  XNOR2XL U169 ( .A(n150), .B(n78), .Y(SUM_1_) );
+  XNOR2XL U170 ( .A(n151), .B(n73), .Y(SUM_2_) );
+  NAND2XL U171 ( .A(n158), .B(n61), .Y(n12) );
+  XNOR2XL U172 ( .A(n12), .B(n62), .Y(SUM_5_) );
+  XNOR2XL U173 ( .A(n152), .B(n49), .Y(SUM_8_) );
+  XNOR2XL U174 ( .A(n153), .B(n65), .Y(SUM_4_) );
+  NAND2XL U175 ( .A(B_1_), .B(A_1_), .Y(n76) );
+  NAND2XL U176 ( .A(B_2_), .B(A_2_), .Y(n72) );
+  NAND2X1 U177 ( .A(B_3_), .B(A_3_), .Y(n69) );
+  OR2X2 U178 ( .A(B_9_), .B(A_9_), .Y(n156) );
+  NAND2XL U179 ( .A(n161), .B(A_15_), .Y(n19) );
+  NAND2X1 U180 ( .A(n156), .B(n45), .Y(n8) );
+  XOR2XL U181 ( .A(n6), .B(n37), .Y(SUM_11_) );
+  XNOR2X1 U182 ( .A(n14), .B(n70), .Y(SUM_3_) );
+  NAND2X1 U183 ( .A(n159), .B(n69), .Y(n14) );
+  XOR2X1 U184 ( .A(n41), .B(n7), .Y(SUM_10_) );
+  INVX1 U185 ( .A(n53), .Y(n51) );
+  INVX1 U186 ( .A(n61), .Y(n59) );
+  INVX1 U187 ( .A(n69), .Y(n67) );
+  AOI21X2 U188 ( .A0(n156), .A1(n46), .B0(n43), .Y(n41) );
+  INVX1 U189 ( .A(n45), .Y(n43) );
+  NOR2X2 U190 ( .A(n35), .B(n32), .Y(n30) );
+  OR2XL U191 ( .A(n161), .B(A_15_), .Y(n154) );
+  OR2X2 U192 ( .A(n28), .B(n25), .Y(n155) );
+  INVX1 U193 ( .A(n24), .Y(n22) );
+  NOR2X2 U194 ( .A(n161), .B(A_11_), .Y(n35) );
+  NAND2X2 U195 ( .A(n161), .B(A_11_), .Y(n36) );
+  NAND2XL U196 ( .A(n161), .B(A_14_), .Y(n26) );
+  NAND2X1 U197 ( .A(B_8_), .B(A_8_), .Y(n48) );
+  OR2X2 U198 ( .A(B_7_), .B(A_7_), .Y(n157) );
+  OR2X2 U199 ( .A(B_5_), .B(A_5_), .Y(n158) );
+  OR2X2 U200 ( .A(B_3_), .B(A_3_), .Y(n159) );
+  OR2XL U201 ( .A(B_0_), .B(A_0_), .Y(n160) );
+  OAI21XL U202 ( .A0(n1), .A1(n28), .B0(n29), .Y(n27) );
+endmodule
+

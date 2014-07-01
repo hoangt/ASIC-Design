@@ -1,0 +1,12 @@
++nowarnTFNPC
++nowarnIWFA
++nowarnSVTL
+src/timescale.v
+src/OUT_PCM_test.v
+src/OUT_PCM.v
+../../mcac/COMPRESS/src/COMPRESS.v
+../../mcac/EXPAND/src/EXPAND.v
+../../mcac/SUBTA/src/SUBTA.v
+../../mcac/LOG/src/LOG.v
+../../mcac/SUBTB/src/SUBTB.v
+../../mcac/SYNC/src/SYNC.v

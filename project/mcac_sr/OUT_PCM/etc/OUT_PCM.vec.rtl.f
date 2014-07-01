@@ -1,0 +1,14 @@
++nowarnTFNPC
++nowarnIWFA
++nowarnSVTL
+src/timescale.v
+src/OUT_PCM_vec_test.v
+src/OUT_PCM.v
+../IG711/src/IG711.v
+../G711/src/G711.v
+../COMPRESS/src/COMPRESS.v
+../EXPAND/src/EXPAND.v
+../SUBTA/src/SUBTA.v
+../LOG/src/LOG.v
+../SUBTB/src/SUBTB.v
+../SYNC/src/SYNC.v

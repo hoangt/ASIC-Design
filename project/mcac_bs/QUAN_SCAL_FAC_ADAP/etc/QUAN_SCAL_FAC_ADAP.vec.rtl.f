@@ -1,0 +1,12 @@
++nowarnTFNPC
++nowarnIWFA
++nowarnSVTL
+src/timescale.v
+src/QUAN_SCAL_FAC_ADAP_vec_test.v
+src/QUAN_SCAL_FAC_ADAP.v
+../FUNCTW/src/FUNCTW.v
+../FILTD/src/FILTD.v
+../LIMB/src/LIMB.v
+../DELAY/src/DELAY.v
+../FILTE/src/FILTE.v
+../MIX/src/MIX.v

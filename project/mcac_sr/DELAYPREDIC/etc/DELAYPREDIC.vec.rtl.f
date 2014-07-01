@@ -1,0 +1,10 @@
++nowarnTFNPC
++nowarnIWFA
++nowarnSVTL
+src/timescale.v
+src/DELAYPREDIC_vec_test.v
+src/DELAYPREDIC.v
+../XORA/src/XORA.v
+../UPB/src/UPB.v
+../TRIGB/src/TRIGB.v
+../DELAY/src/DELAY.v

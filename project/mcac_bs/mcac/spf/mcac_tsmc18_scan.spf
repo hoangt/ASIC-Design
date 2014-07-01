@@ -1,0 +1,262 @@
+STIL 1.0 {
+    Design P2001.01;
+}
+Header {
+    Title "Minimal STIL for design `mcac'";
+    Date "Fri May  9 01:46:47 2014";
+    Source "DFT Compiler D-2010.03-SP3";
+}
+Signals {
+    "clk" In;
+    "dec_i[0]" In;
+    "dec_i[1]" In;
+    "dec_i[2]" In;
+    "dec_i[3]" In;
+    "dec_i[4]" In;
+    "dec_i[5]" In;
+    "dec_i[6]" In;
+    "dec_i[7]" In;
+    "dec_i_clk" In;
+    "dec_i_fs" In;
+    "enc_s[0]" In;
+    "enc_s[1]" In;
+    "enc_s[2]" In;
+    "enc_s[3]" In;
+    "enc_s[4]" In;
+    "enc_s[5]" In;
+    "enc_s[6]" In;
+    "enc_s[7]" In;
+    "enc_s_clk" In;
+    "enc_s_fs" In;
+    "law" In;
+    "rate[0]" In;
+    "rate[1]" In;
+    "reset" In;
+    "scan_enable" In;
+    "scan_in0" In;
+    "scan_in1" In;
+    "scan_in2" In;
+    "scan_in3" In;
+    "scan_in4" In;
+    "test_mode" In;
+    "dec_s[0]" Out;
+    "dec_s[1]" Out;
+    "dec_s[2]" Out;
+    "dec_s[3]" Out;
+    "dec_s[4]" Out;
+    "dec_s[5]" Out;
+    "dec_s[6]" Out;
+    "dec_s[7]" Out;
+    "dec_s_clk" Out;
+    "dec_s_fs" Out;
+    "enc_i[0]" Out;
+    "enc_i[1]" Out;
+    "enc_i[2]" Out;
+    "enc_i[3]" Out;
+    "enc_i[4]" Out;
+    "enc_i[5]" Out;
+    "enc_i[6]" Out;
+    "enc_i[7]" Out;
+    "enc_i_clk" Out;
+    "enc_i_fs" Out;
+    "scan_out0" Out;
+    "scan_out1" Out;
+    "scan_out2" Out;
+    "scan_out3" Out;
+    "scan_out4" Out;
+}
+SignalGroups {
+    "_clk" = '"clk" + "reset"';
+    "all_inputs" = '"clk" + "dec_i[0]" + "dec_i[1]" + "dec_i[2]" + "dec_i[3]" + 
+    "dec_i[4]" + "dec_i[5]" + "dec_i[6]" + "dec_i[7]" + "dec_i_clk" + "dec_i_fs" 
+    + "enc_s[0]" + "enc_s[1]" + "enc_s[2]" + "enc_s[3]" + "enc_s[4]" + 
+    "enc_s[5]" + "enc_s[6]" + "enc_s[7]" + "enc_s_clk" + "enc_s_fs" + "law" + 
+    "rate[0]" + "rate[1]" + "reset" + "scan_enable" + "scan_in0" + "scan_in1" + 
+    "scan_in2" + "scan_in3" + "scan_in4" + "test_mode"';
+    "all_outputs" = '"dec_s[0]" + "dec_s[1]" + "dec_s[2]" + "dec_s[3]" + 
+    "dec_s[4]" + "dec_s[5]" + "dec_s[6]" + "dec_s[7]" + "dec_s_clk" + "dec_s_fs" 
+    + "enc_i[0]" + "enc_i[1]" + "enc_i[2]" + "enc_i[3]" + "enc_i[4]" + 
+    "enc_i[5]" + "enc_i[6]" + "enc_i[7]" + "enc_i_clk" + "enc_i_fs" + 
+    "scan_out0" + "scan_out1" + "scan_out2" + "scan_out3" + "scan_out4"';
+    "all_ports" = '"all_inputs" + "all_outputs"';
+    "_pi" = '"all_inputs"';
+    "_po" = '"all_outputs"';
+}
+ScanStructures {
+}
+Timing {
+    WaveformTable "_default_WFT_" {
+        Period '100ns';
+        Waveforms {
+            "all_inputs" {
+                0 {
+                    '0ns' D;
+                }
+            }
+            "all_inputs" {
+                1 {
+                    '0ns' U;
+                }
+            }
+            "all_inputs" {
+                Z {
+                    '0ns' Z;
+                }
+            }
+            "all_inputs" {
+                N {
+                    '0ns' N;
+                }
+            }
+            "all_outputs" {
+                X {
+                    '0ns' X;
+                    '40ns' X;
+                }
+            }
+            "all_outputs" {
+                H {
+                    '0ns' X;
+                    '40ns' H;
+                }
+            }
+            "all_outputs" {
+                T {
+                    '0ns' X;
+                    '40ns' T;
+                }
+            }
+            "all_outputs" {
+                L {
+                    '0ns' X;
+                    '40ns' L;
+                }
+            }
+            "reset" {
+                P {
+                    '0ns' D;
+                    '45ns' U;
+                    '55ns' D;
+                }
+            }
+            "clk" {
+                P {
+                    '0ns' D;
+                    '45ns' U;
+                    '55ns' D;
+                }
+            }
+        }
+    }
+}
+Procedures {
+    "capture" {
+        W "_default_WFT_";
+        F {
+            "test_mode" = 1;
+        }
+        V {
+            "_pi" = \r32 #;
+        }
+        V {
+            "_po" = \r25 #;
+        }
+    }
+    "capture_clk" {
+        W "_default_WFT_";
+        F {
+            "test_mode" = 1;
+        }
+        "forcePI" : V {
+            "_pi" = \r32 #;
+        }
+        "measurePO" : V {
+            "_po" = \r25 #;
+        }
+        C {
+            "dec_s[0]" = X;
+            "dec_s[1]" = X;
+            "dec_s[2]" = X;
+            "dec_s[3]" = X;
+            "dec_s[4]" = X;
+            "dec_s[5]" = X;
+            "dec_s[6]" = X;
+            "dec_s[7]" = X;
+            "dec_s_clk" = X;
+            "dec_s_fs" = X;
+            "enc_i[0]" = X;
+            "enc_i[1]" = X;
+            "enc_i[2]" = X;
+            "enc_i[3]" = X;
+            "enc_i[4]" = X;
+            "enc_i[5]" = X;
+            "enc_i[6]" = X;
+            "enc_i[7]" = X;
+            "enc_i_clk" = X;
+            "enc_i_fs" = X;
+            "scan_out0" = X;
+            "scan_out1" = X;
+            "scan_out2" = X;
+            "scan_out3" = X;
+            "scan_out4" = X;
+        }
+        "pulse" : V {
+            "clk" = P;
+        }
+    }
+    "capture_reset" {
+        W "_default_WFT_";
+        F {
+            "test_mode" = 1;
+        }
+        "forcePI" : V {
+            "_pi" = \r32 #;
+        }
+        "measurePO" : V {
+            "_po" = \r25 #;
+        }
+        C {
+            "dec_s[0]" = X;
+            "dec_s[1]" = X;
+            "dec_s[2]" = X;
+            "dec_s[3]" = X;
+            "dec_s[4]" = X;
+            "dec_s[5]" = X;
+            "dec_s[6]" = X;
+            "dec_s[7]" = X;
+            "dec_s_clk" = X;
+            "dec_s_fs" = X;
+            "enc_i[0]" = X;
+            "enc_i[1]" = X;
+            "enc_i[2]" = X;
+            "enc_i[3]" = X;
+            "enc_i[4]" = X;
+            "enc_i[5]" = X;
+            "enc_i[6]" = X;
+            "enc_i[7]" = X;
+            "enc_i_clk" = X;
+            "enc_i_fs" = X;
+            "scan_out0" = X;
+            "scan_out1" = X;
+            "scan_out2" = X;
+            "scan_out3" = X;
+            "scan_out4" = X;
+        }
+        "pulse" : V {
+            "reset" = P;
+        }
+    }
+}
+MacroDefs {
+    "test_setup" {
+        W "_default_WFT_";
+        V {
+            "clk" = 0;
+            "test_mode" = 1;
+        }
+        V {
+            "reset" = 0;
+        }
+    }
+}
+

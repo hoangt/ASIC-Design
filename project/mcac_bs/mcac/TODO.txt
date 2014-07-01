@@ -1,0 +1,13 @@
+
+(1) The sim.csh script needs to be modified to support passing
+a module name to select the appropriate simulation config
+from the ./etc directory.
+
+(2) The syn.csh script needs to be modified to support passing
+a module name to the synthesis tools. Also need to support
+a source file configuration (similar to simulation).
+
+(3) The pt.csh script needs to be modified to support passing
+a module name to the timing tools. Also need to support
+a source file configuration (similar to simulation).
+

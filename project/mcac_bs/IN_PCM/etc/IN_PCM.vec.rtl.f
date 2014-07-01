@@ -1,0 +1,9 @@
++nowarnTFNPC
++nowarnIWFA
++nowarnSVTL
+src/timescale.v
+src/IN_PCM_vec_test.v
+src/IN_PCM.v
+../EXPAND/src/EXPAND.v
+../SUBTA/src/SUBTA.v
+../G711/src/G711.v
